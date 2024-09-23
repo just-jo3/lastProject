@@ -31,7 +31,7 @@
         }
         .nav-left li, .nav-right li {
             display: inline-block;
-            margin-left: 30px; /* Increased margin for more space */
+            margin-left: 30px;
         }
         .nav-left a, .nav-right a {
             text-decoration: none;
@@ -96,16 +96,16 @@
             width: 200px;
             margin: 10px;
             padding: 20px;
-            border: 2px solid yellow; /* Set the border color */
+            border: 2px solid yellow;
             border-radius: 4px;
             text-align: center;
             background-color: #555;
-            color: white; /* Default text color */
-            transition: all 0.3s; /* Smooth transition */
+            color: white;
+            transition: all 0.3s;
         }
         .services-item:hover {
-            border-color: yellowgreen; /* Change border color on hover */
-            color: yellow; /* Change text color on hover */
+            border-color: yellowgreen;
+            color: yellow;
         }
         .testimonials {
             background-color: #333;
@@ -165,13 +165,32 @@
             width: 320px;
             height: 180px;
         }
+
+        /* New styles for heading animation */
+        .logo h1 {
+            font-size: 48px; /* Adjust font size */
+            animation: bounce 2s infinite; /* Bounce effect */
+            text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px #f39c12; /* Glowing effect */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container d-flex justify-content-between align-items-center">
             <div class="logo">
-                <h1>Arcade Haven</h1>
+                <h1 class="arcade-heading">Arcade Haven</h1>
             </div>
             <div class="nav-left">
                 <ul>
@@ -369,3 +388,4 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
+
